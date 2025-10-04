@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { useTodoStore } from '../store/todoStore';
-import { Category } from '../types';
+import type { Category } from '../types';
 
 const AddTask: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);

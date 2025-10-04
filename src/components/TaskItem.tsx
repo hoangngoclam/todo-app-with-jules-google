@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trash2 } from 'lucide-react';
-import { Todo } from '../types';
+import type { Todo } from '../types';
 import { useTodoStore } from '../store/todoStore';
 
 type TaskItemProps = {

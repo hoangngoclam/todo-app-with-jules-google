@@ -4,7 +4,7 @@ import CategoryCard from '../components/CategoryCard';
 import TaskItem from '../components/TaskItem';
 import AddTask from '../components/AddTask';
 import { useTodoStore } from '../store/todoStore';
-import { Todo } from '../types';
+import type { Todo } from '../types';
 
 const HomePage: React.FC = () => {
   const { todos } = useTodoStore();

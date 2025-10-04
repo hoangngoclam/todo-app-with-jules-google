@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { Todo } from '../types';
+import type { Todo } from '../types';
 
 type TodoStore = {
   todos: Todo[];

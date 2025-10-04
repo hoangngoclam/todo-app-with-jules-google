@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Trash2 } from 'lucide-react';
 import type { Todo } from '../types';
 import { useTodoStore } from '../store/todoStore';
+import ConfirmDialog from './ConfirmDialog';
 
 type TaskItemProps = {
   todo: Todo;
@@ -9,6 +10,7 @@ type TaskItemProps = {
 
 const TaskItem: React.FC<TaskItemProps> = ({ todo }) => {
   const { toggleTodo, deleteTodo } = useTodoStore();
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
 
   return (
     <div
@@ -40,13 +42,24 @@ const TaskItem: React.FC<TaskItemProps> = ({ todo }) => {
       <button
         onClick={(event) => {
           event.stopPropagation();
-          deleteTodo(todo.id);
+          setShowConfirmDelete(true);
         }}
         className="rounded-full p-2 text-slate-400 transition hover:bg-rose-50 hover:text-rose-500"
         aria-label="Delete task"
       >
         <Trash2 size={18} />
       </button>
+      <ConfirmDialog
+        open={showConfirmDelete}
+        title="Delete task"
+        description="This action cannot be undone. Are you sure you want to remove this task?"
+        confirmLabel="Delete"
+        onConfirm={() => {
+          deleteTodo(todo.id);
+          setShowConfirmDelete(false);
+        }}
+        onCancel={() => setShowConfirmDelete(false)}
+      />
     </div>
   );
 };

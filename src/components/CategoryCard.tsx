@@ -1,5 +1,15 @@
 import React from 'react';
 
+/**
+ * Props for the `CategoryCard` component.
+ *
+ * @property {'Business' | 'Personal'} category - The category to display.
+ * @property {number} taskCount - The number of tasks in this category.
+ * @property {number} totalTasks - The total number of tasks across all categories.
+ * @property {string} color - The color of the progress bar.
+ * @property {boolean} [isActive] - Whether the card is currently active.
+ * @property {(category: 'Business' | 'Personal') => void} [onSelect] - A callback function to be invoked when the card is selected.
+ */
 type CategoryCardProps = {
   category: 'Business' | 'Personal';
   taskCount: number;
@@ -9,6 +19,15 @@ type CategoryCardProps = {
   onSelect?: (category: 'Business' | 'Personal') => void;
 };
 
+/**
+ * A card component that displays information about a task category.
+ *
+ * This component shows the number of tasks in a given category, the percentage of
+ * tasks it represents, and a progress bar. It can be selected to filter tasks
+al category.
+ * @param {CategoryCardProps} props - The props for the component.
+ * @returns The rendered `CategoryCard` component.
+ */
 const CategoryCard: React.FC<CategoryCardProps> = ({
   category,
   taskCount,

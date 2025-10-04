@@ -21,9 +21,10 @@ const AddTask: React.FC = () => {
     <>
       <button
         onClick={() => setModalOpen(true)}
-        className="fixed bottom-10 right-10 bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700"
+        className="fixed bottom-6 right-6 rounded-full bg-indigo-600 p-3 text-white shadow-lg transition-colors hover:bg-indigo-700 sm:bottom-8 sm:right-8 sm:p-4 md:bottom-10 md:right-10"
+        aria-label="Add task"
       >
-        <Plus size={28} />
+        <Plus className="h-6 w-6 sm:h-7 sm:w-7" />
       </button>
 
       {modalOpen && (

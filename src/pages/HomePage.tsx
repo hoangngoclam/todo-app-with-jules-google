@@ -6,6 +6,15 @@ import AddTask from '../components/AddTask';
 import { useTodoStore } from '../store/todoStore';
 import type { Category, Todo } from '../types';
 
+/**
+ * The main page of the application, displaying the user's tasks.
+ *
+ * This component serves as the primary interface for the user, showcasing the
+ * header, category filters, and the list of tasks. It allows users to filter
+ * tasks by category and view their progress.
+ *
+ * @returns The rendered `HomePage` component.
+ */
 const HomePage: React.FC = () => {
   const { todos } = useTodoStore();
   const [activeFilter, setActiveFilter] = useState<'All' | Category>('All');

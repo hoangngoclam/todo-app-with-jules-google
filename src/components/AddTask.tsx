@@ -3,6 +3,15 @@ import { Plus } from 'lucide-react';
 import { useTodoStore } from '../store/todoStore';
 import type { Category } from '../types';
 
+/**
+ * A component that provides a button to add a new task.
+ *
+ * This component renders a floating action button that, when clicked, opens a modal
+ * dialog to add a new task. The modal contains a form to enter the task details,
+ * including the task name and category.
+ *
+ * @returns The rendered `AddTask` component.
+ */
 const AddTask: React.FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [taskText, setTaskText] = useState('');

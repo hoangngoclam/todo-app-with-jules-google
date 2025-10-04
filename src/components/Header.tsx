@@ -1,5 +1,13 @@
 import React from 'react';
 
+/**
+ * A header component that displays the title and a brief description of the application.
+ *
+ * This component renders a static header with a title and a subtitle, providing a
+ * clear and concise introduction to the application's purpose.
+ *
+ * @returns The rendered `Header` component.
+ */
 const Header: React.FC = () => {
   return (
     <div className="flex flex-col items-start gap-2 pb-8">

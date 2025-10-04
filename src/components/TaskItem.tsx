@@ -3,10 +3,25 @@ import { Trash2 } from 'lucide-react';
 import type { Todo } from '../types';
 import { useTodoStore } from '../store/todoStore';
 
+/**
+ * Props for the `TaskItem` component.
+ *
+ * @property {Todo} todo - The todo item to display.
+ */
 type TaskItemProps = {
   todo: Todo;
 };
 
+/**
+ * A component that displays a single todo item.
+ *
+ * This component renders a checkbox to mark the todo as complete, the todo text,
+ * and a button to delete the todo. The appearance of the component changes based
+ * on whether the todo is completed.
+ *
+ * @param {TaskItemProps} props - The props for the component.
+ * @returns The rendered `TaskItem` component.
+ */
 const TaskItem: React.FC<TaskItemProps> = ({ todo }) => {
   const { toggleTodo, deleteTodo } = useTodoStore();
 

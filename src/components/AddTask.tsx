@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Plus, X } from 'lucide-react';
-import { useTodoStore } from '../store/todoStore';
-import type { Category } from '../types';
+import { useTodoStore } from '@/store/todoStore';
+import type { Category } from '@/types';
 
 /**
  * A component that provides a button to add a new task.

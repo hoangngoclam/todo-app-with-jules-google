@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { Todo } from '../types';
+import type { Todo } from '@/types';
 
 /**
  * Represents the state and actions for managing todos.

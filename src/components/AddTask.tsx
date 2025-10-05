@@ -59,7 +59,7 @@ const AddTask: React.FC = () => {
   const renderModal = () => {
     if (!modalOpen || typeof document === 'undefined') {
       return null;
-    }
+    
 
     return createPortal(
       <div

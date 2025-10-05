@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Trash2 } from 'lucide-react';
-import type { Todo } from '../types';
-import { useTodoStore } from '../store/todoStore';
-import ConfirmDialog from './ConfirmDialog';
+import type { Todo } from '@/types';
+import { useTodoStore } from '@/store/todoStore';
+import ConfirmDialog from '@/components/ConfirmDialog';
 
 /**
  * Props for the `TaskItem` component.

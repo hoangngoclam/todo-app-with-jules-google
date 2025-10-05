@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Header from '../components/Header';
-import CategoryCard from '../components/CategoryCard';
-import TaskItem from '../components/TaskItem';
-import AddTask from '../components/AddTask';
-import { useTodoStore } from '../store/todoStore';
-import type { Category, Todo } from '../types';
+import Header from '@/components/Header';
+import CategoryCard from '@/components/CategoryCard';
+import TaskItem from '@/components/TaskItem';
+import AddTask from '@/components/AddTask';
+import { useTodoStore } from '@/store/todoStore';
+import type { Category, Todo } from '@/types';
 
 /**
  * The main page of the application, displaying the user's tasks.

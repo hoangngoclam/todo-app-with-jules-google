@@ -1,7 +1,7 @@
 name: Deploy ReactJS App to S3 Bucket
 
 on:
-  push:
+  pull_request:
     branches:
       - master
 

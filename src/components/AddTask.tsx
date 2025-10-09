@@ -158,7 +158,7 @@ const AddTask: React.FC = () => {
                 disabled={!isValidTask}
                 className="rounded-xl bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:bg-indigo-300"
               >
-                Add task
+                Add a task
               </button>
             </div>
           </form>
